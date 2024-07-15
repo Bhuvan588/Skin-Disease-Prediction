@@ -3,19 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skin-Disease-Classification</title>
+    <title>Skin Disease Classification</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="container">
+    
+    <div class="heading">
         <h2>Skin Disease Classification</h2>
+    </div>
 
-        <form action="/", method="post", enctype="multipart/form-data">
+    <div class="description">
+        <h3>ABOUT THIS WEBSITE</h3>
+        <div>
+            This website leverages the power of Deep Learning by using Convolutional Neural Networks (CNN's) and hence classifies a given image into either
+            of 8 skin diseases. I decided to learn CNN's by actual implementation, so I stumbled upon this dataset on Kaggle and thought to create a CNN and implement it using Flask. These skin diseases are:
+            <div class="lists">
+                <ul>
+                    <li>Cellulitis</li>
+                    <li>Impetigo</li>
+                </ul>
+                <ul>
+                    <li>Athlete-Foot</li>
+                    <li>Nail-Fungus</li>
+                </ul>
+                <ul>
+                    <li>Ringworm</li>
+                    <li>Cutaneous-larva-migrans</li>
+                </ul>
+                <ul>
+                    <li>Chickenpox</li>
+                    <li>Shingles</li>
+                </ul>
+            </div>
+            <div class="tech">
+                <div id="tech-heading">TECHNOLOGIES USED:</div>
+                <div class="tech_stack">
+                    <div>Python</div>
+                    <div>TensorFlow</div>
+                    <div>Flask</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            <input type="file" name="file" accept="image/*" required>
-            <button type="submit">Upload</button>
-
+    <div class="content">
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div id="drop-area">
+                <p>Paste your image here or click to upload</p>
+                <input type="file" id="file-input" name="file" accept="image/*" required style="display: none;">
+            </div>
+            <button type="submit">DETECT</button>
         </form>
+
+        <img id="preview" src="" alt="Image preview">
 
         {% if prediction %}
             <div class="result">
@@ -23,5 +63,7 @@
             </div>
         {% endif %}
     </div>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
 </body>
 </html>

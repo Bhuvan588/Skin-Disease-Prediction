@@ -1,24 +1,5 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-    margin: 0;
-}
 
-.container {
-    text-align: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    margin-bottom: 20px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 form {
     margin-bottom: 20px;
@@ -29,18 +10,92 @@ input[type="file"] {
 }
 
 button {
-    background: #007BFF;
+    background: #023047;
     color: white;
     border: none;
     padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: 90px;
     border-radius: 5px;
     cursor: pointer;
 }
-
-button:hover {
-    background: #0056b3;
+p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: bold;
 }
+
 
 .result {
     margin-top: 20px;
+}
+
+.heading{
+    margin:auto;
+    max-width: fit-content;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: #023047;
+}
+
+.content{
+    width: 500px;
+    margin-right: 50px;
+    margin-top: 100px;
+    border: dotted #023047 4px;
+    padding: 5px;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body{
+    background-color: #aedbf1;
+}
+.description{
+    max-width: 900px;
+    float: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 30px;
+}
+
+ul{
+    max-height: 100px;
+    margin-left: 50px;
+}
+
+li{
+    padding: 5px;
+}
+.lists{
+    display: flex;
+    margin-top: 20px;
+}
+h3{
+    font-style: bold;
+    color: #023047;
+    margin-top: 30px;
+}
+.tech{
+    display: flex;
+    padding: 20px;
+}
+
+.tech_stack{
+    display: flex;
+    padding: 20px;
+    float: left;
+}
+
+.tech_stack div{
+    margin: 20px;
+}
+
+
+#tech-heading{
+    font-size: 20px;
+    font-style: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
