@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skin Disease Classification</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <div class="heading">
-        <h2>Skin Disease Classification</h2>
-    </div>
+
+       
+    <!-- As a heading -->
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1" id="titlehead">Skin Disease Classification</span>
+      </div>
+    </nav>
+    
 
     <div class="description">
         <h3>ABOUT THIS WEBSITE</h3>
-        <div>
+        <div id="big-box">
             This website leverages the power of Deep Learning by using Convolutional Neural Networks (CNN's) and hence classifies a given image into either
             of 8 skin diseases. I decided to learn CNN's by actual implementation, so I stumbled upon this dataset on Kaggle and thought to create a CNN and implement it using Flask. These skin diseases are:
             <div class="lists">
@@ -35,18 +44,12 @@
                     <li>Shingles</li>
                 </ul>
             </div>
-            <div class="tech">
-                <div id="tech-heading">TECHNOLOGIES USED:</div>
-                <div class="tech_stack">
-                    <div>Python</div>
-                    <div>TensorFlow</div>
-                    <div>Flask</div>
-                </div>
-            </div>
         </div>
-    </div>
+        
+        
 
-    <div class="content">
+    </div>
+    <div class="content" >
         <form action="/" method="post" enctype="multipart/form-data">
             <div id="drop-area">
                 <p>Paste your image here or click to upload</p>
@@ -63,6 +66,19 @@
             </div>
         {% endif %}
     </div>
+    <footer class="tech"> 
+        <p> TECHNOLOGIES USED:</p>
+        <div id="tech-heading"></div>
+            <div class="tech_stack">
+                <div>Python</div>
+                <div>TensorFlow</div>
+                <div>Flask</div>
+            </div>
+    </footer>
+        
+   
+
+    
 
     <script src="{{ url_for('static', filename='index.js') }}"></script>
 </body>
